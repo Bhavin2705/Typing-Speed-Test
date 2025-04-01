@@ -1,0 +1,85 @@
+/* Custom Properties */
+:root {
+	--primary-color: #4f46e5;
+	--primary-hover: #4338ca;
+	--correct-color: #10b981;
+	--error-color: #ef4444;
+}
+
+/* Character Styling - Required for typing functionality */
+.char {
+	display: inline-block;
+	position: relative;
+}
+
+.char.correct {
+	color: var(--correct-color);
+}
+
+.char.incorrect {
+	color: var(--error-color);
+	text-decoration: underline;
+}
+
+.char.active {
+	background-color: rgba(79, 70, 229, 0.2);
+	border-radius: 2px;
+}
+
+/* Utility Classes */
+.hidden {
+	display: none !important;
+}
+
+/* Spinner Animation */
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/* Mobile-first responsive adjustments */
+@media (max-width: 640px) {
+	.test-paragraph {
+		font-size: 1rem !important;
+		padding: 1rem !important;
+	}
+}
+
+/* Extra small devices (300px and below) */
+@media (max-width: 300px) {
+	.app-title {
+		font-size: 1.5rem !important;
+	}
+
+	.welcome-heading {
+		font-size: 1.25rem !important;
+		line-height: 1.3 !important;
+	}
+
+	.test-paragraph {
+		font-size: 0.875rem !important;
+		padding: 0.75rem !important;
+		min-height: 150px !important;
+	}
+
+	.results-heading {
+		font-size: 1.25rem !important;
+	}
+
+	.stat-card {
+		padding: 0.75rem !important;
+	}
+
+	.stat-value {
+		font-size: 1.5rem !important;
+	}
+
+	.timer {
+		font-size: 1rem !important;
+	}
+}
